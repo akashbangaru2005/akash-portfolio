@@ -1,0 +1,1579 @@
+/* =========================================================
+
+   PROJECTS SECTION
+
+   ========================================================= */
+
+.projects-section {
+
+  width: 100%;
+
+  padding: 90px 0;
+
+  overflow: hidden;
+
+}
+
+/* =========================================================
+
+   PROJECTS CONTAINER
+
+   ========================================================= */
+
+.projects-container {
+
+  width: 100%;
+
+  max-width: 1080px;
+
+  margin: 0 auto;
+
+  padding: 0 20px;
+
+  box-sizing: border-box;
+
+}
+
+/* =========================================================
+
+   PROJECT HEADER
+
+   ========================================================= */
+
+.projects-header {
+
+  width: 100%;
+
+  max-width: 700px;
+
+  margin: 0 auto 45px;
+
+  text-align: center;
+
+}
+
+.projects-label {
+
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-family: "Courier New", Consolas, monospace;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: #00eaff;
+
+}
+
+.projects-header h2 {
+
+  margin: 0 0 14px;
+
+  font-size: 42px;
+
+  font-weight: 800;
+
+  line-height: 1.1;
+
+  color: #f5f7fa;
+
+}
+
+.projects-header h2 span {
+
+  color: #00ff9c;
+
+  text-shadow:
+
+    0 0 12px rgba(0, 255, 156, 0.25);
+
+}
+
+.projects-header p {
+
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  color: #788393;
+
+}
+
+/* =========================================================
+
+   PROJECT GRID
+
+   ========================================================= */
+
+/*
+
+   6 columns are used internally.
+
+   First row:
+
+   Card 1 = columns 1-2
+
+   Card 2 = columns 3-4
+
+   Card 3 = columns 5-6
+
+   Second row:
+
+   Card 4 = columns 2-4
+
+   Card 5 = columns 4-6
+
+   This keeps the last two cards visually centered.
+
+*/
+
+.projects-grid {
+
+  width: 100%;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+
+    repeat(6, minmax(0, 1fr));
+
+  gap: 18px;
+
+  align-items: stretch;
+
+}
+
+/* =========================================================
+
+   PROJECT CARD
+
+   ========================================================= */
+
+.project-card {
+
+  position: relative;
+
+  width: 100%;
+
+  min-width: 0;
+
+  min-height: 255px;
+
+  padding: 22px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background:
+
+    radial-gradient(
+
+      circle at 100% 0%,
+
+      rgba(0, 255, 170, 0.08),
+
+      transparent 40%
+
+    ),
+
+    linear-gradient(
+
+      145deg,
+
+      rgba(15, 18, 24, 0.98),
+
+      rgba(7, 10, 15, 0.98)
+
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow:
+
+    0 5px 20px rgba(0, 0, 0, 0.2);
+
+  transition:
+
+    transform 0.3s ease,
+
+    border-color 0.3s ease,
+
+    box-shadow 0.3s ease;
+
+}
+
+/* =========================================================
+
+   CARD POSITIONS - DESKTOP
+
+   ========================================================= */
+
+/* First row */
+
+.project-card:nth-child(1) {
+
+  grid-column: 1 / 3;
+
+}
+
+.project-card:nth-child(2) {
+
+  grid-column: 3 / 5;
+
+}
+
+.project-card:nth-child(3) {
+
+  grid-column: 5 / 7;
+
+}
+
+/* Second row */
+
+.project-card:nth-child(4) {
+
+  grid-column: 2 / 4;
+
+}
+
+.project-card:nth-child(5) {
+
+  grid-column: 4 / 6;
+
+}
+
+/* =========================================================
+
+   CARD HOVER
+
+   ========================================================= */
+
+.project-card:hover {
+
+  transform: translateY(-5px);
+
+  border-color:
+
+    rgba(0, 255, 170, 0.4);
+
+  box-shadow:
+
+    0 14px 35px rgba(0, 255, 170, 0.08),
+
+    inset 0 0 25px rgba(0, 255, 170, 0.02);
+
+}
+
+/* =========================================================
+
+   PROJECT NUMBER
+
+   ========================================================= */
+
+.project-number {
+
+  margin-bottom: 20px;
+
+  font-family:
+
+    "Courier New",
+
+    Consolas,
+
+    monospace;
+
+  font-size: 32px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  color:
+
+    rgba(100, 115, 135, 0.55);
+
+}
+
+/* =========================================================
+
+   PROJECT CATEGORY
+
+   ========================================================= */
+
+.project-category {
+
+  width: 100%;
+
+  margin-bottom: 9px;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+
+  font-family:
+
+    "Courier New",
+
+    Consolas,
+
+    monospace;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+
+  color: #00eaff;
+
+}
+
+/* =========================================================
+
+   PROJECT TITLE
+
+   ========================================================= */
+
+.project-card h3 {
+
+  margin: 0 0 10px;
+
+  font-size: 19px;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  color: #f5f7fa;
+
+}
+
+/* =========================================================
+
+   PROJECT DESCRIPTION
+
+   ========================================================= */
+
+.project-description {
+
+  margin: 0;
+
+  font-size: 11.5px;
+
+  line-height: 1.65;
+
+  color: #788393;
+
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+
+  -webkit-line-clamp: 3;
+
+  overflow: hidden;
+
+}
+
+/* =========================================================
+
+   TECHNOLOGY TAGS
+
+   ========================================================= */
+
+.project-tech {
+
+  width: 100%;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: auto;
+
+  margin-bottom: 14px;
+
+}
+
+.project-tech span {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 5px 7px;
+
+  min-height: 20px;
+
+  box-sizing: border-box;
+
+  border-radius: 5px;
+
+  background:
+
+    rgba(255, 255, 255, 0.045);
+
+  border:
+
+    1px solid rgba(255, 255, 255, 0.06);
+
+  color: #8993a3;
+
+  font-family:
+
+    "Courier New",
+
+    Consolas,
+
+    monospace;
+
+  font-size: 8px;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  transition:
+
+    background 0.25s ease,
+
+    border-color 0.25s ease,
+
+    color 0.25s ease;
+
+}
+
+/* Technology hover */
+
+.project-card:hover .project-tech span {
+
+  color: #aab5c2;
+
+  background:
+
+    rgba(0, 255, 170, 0.035);
+
+  border-color:
+
+    rgba(0, 255, 170, 0.12);
+
+}
+
+/* =========================================================
+
+   PROJECT LINKS
+
+   ========================================================= */
+
+.project-links {
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-top: auto;
+
+}
+
+.project-link {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  color: #00eaff;
+
+  text-decoration: none;
+
+  font-family:
+
+    "Courier New",
+
+    Consolas,
+
+    monospace;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  transition:
+
+    color 0.25s ease,
+
+    transform 0.25s ease;
+
+}
+
+.project-link:hover {
+
+  color: #ffffff;
+
+  transform: translateX(3px);
+
+}
+
+/* =========================================================
+
+   TABLET
+
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .projects-section {
+
+    padding: 75px 0 85px;
+
+  }
+
+  .projects-container {
+
+    max-width: 760px;
+
+    padding: 0 16px;
+
+  }
+
+  .projects-grid {
+
+    grid-template-columns:
+
+      repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+
+  }
+
+  /* Reset desktop positions */
+
+  .project-card:nth-child(1),
+
+  .project-card:nth-child(2),
+
+  .project-card:nth-child(3),
+
+  .project-card:nth-child(4),
+
+  .project-card:nth-child(5) {
+
+    grid-column: auto;
+
+  }
+
+  .project-card {
+
+    min-height: 250px;
+
+    padding: 21px;
+
+  }
+
+}
+
+/* =========================================================
+
+   MOBILE
+
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .projects-section {
+
+    padding: 65px 0 75px;
+
+  }
+
+  .projects-container {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    padding: 0 14px;
+
+  }
+
+  /* Header */
+
+  .projects-header {
+
+    margin-bottom: 30px;
+
+  }
+
+  .projects-label {
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+  }
+
+  .projects-header h2 {
+
+    font-size: 30px;
+
+  }
+
+  .projects-header p {
+
+    font-size: 12px;
+
+    line-height: 1.65;
+
+  }
+
+  /* Grid */
+
+  .projects-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+
+  }
+
+  /* Reset all desktop/tablet positioning */
+
+  .project-card:nth-child(1),
+
+  .project-card:nth-child(2),
+
+  .project-card:nth-child(3),
+
+  .project-card:nth-child(4),
+
+  .project-card:nth-child(5) {
+
+    grid-column: auto;
+
+  }
+
+  /* Cards */
+
+  .project-card {
+
+    min-height: 240px;
+
+    padding: 20px;
+
+    border-radius: 14px;
+
+  }
+
+  .project-number {
+
+    font-size: 29px;
+
+    margin-bottom: 18px;
+
+  }
+
+  .project-card h3 {
+
+    font-size: 19px;
+
+  }
+
+  .project-description {
+
+    font-size: 11.5px;
+
+  }
+
+}
+
+/* =========================================================
+
+   SMALL MOBILE
+
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .projects-container {
+
+    padding: 0 11px;
+
+  }
+
+  .project-card {
+
+    min-height: 230px;
+
+    padding: 18px;
+
+  }
+
+  .project-number {
+
+    font-size: 27px;
+
+  }
+
+  .project-card h3 {
+
+    font-size: 18px;
+
+  }
+
+  .project-tech span {
+
+    font-size: 7px;
+
+    padding: 4px 6px;
+
+  }
+
+  .project-link {
+
+    font-size: 8px;
+
+  }
+
+}
+
+/* =========================================================
+
+   REDUCED MOTION
+
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .project-card,
+
+  .project-link,
+
+  .project-tech span {
+
+    transition: none;
+
+  }
+
+  .project-card:hover {
+
+    transform: none;
+
+  }
+
+}
+
+/* =========================================================
+
+   FIX: HERO CONTENT HIDDEN BEHIND MATRIX BACKGROUND
+
+   ========================================================= */
+
+/* The actual JSX uses className="hero" */
+
+.hero {
+
+  position: relative !important;
+
+  isolation: isolate;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background-color: #030608;
+
+}
+
+/* Keep the Matrix background inside the hero section */
+
+.hero > .code-matrix-background {
+
+  position: absolute !important;
+
+  inset: 0 !important;
+
+  width: 100% !important;
+
+  height: 100% !important;
+
+  z-index: 0 !important;
+
+  pointer-events: none !important;
+
+}
+
+/* Keep decorative backgrounds behind the hero content */
+
+.hero-grid-background,
+
+.hero > .binary-rain {
+
+  z-index: 1;
+
+  pointer-events: none;
+
+}
+
+/* Bring the main hero layout to the front */
+
+.hero > .hero-container {
+
+  position: relative !important;
+
+  z-index: 10 !important;
+
+}
+
+/* Make the hero text and portrait visible */
+
+.hero .hero-content,
+
+.hero .hero-visual {
+
+  position: relative !important;
+
+  z-index: 11 !important;
+
+  visibility: visible;
+
+}
+
+/* Keep the buttons clickable */
+
+.hero .hero-buttons,
+
+.hero .hero-meta {
+
+  position: relative;
+
+  z-index: 12;
+
+}
+
+/* Keep the scroll indicator visible */
+
+.hero .hero-scroll {
+
+  z-index: 12;
+
+}
+
+/* Keep the Matrix background from blocking interactions */
+
+.code-matrix-background {
+
+  pointer-events: none !important;
+
+}
+
+/* Preserve readability on the dark background */
+
+.hero .hero-content h1,
+
+.hero .hero-content p,
+
+.hero .hero-content .hero-kicker,
+
+.hero .hero-content .hero-label {
+
+  position: relative;
+
+  z-index: 11;
+
+}
+
+/* Responsive height */
+
+@media (max-width: 768px) {
+
+  .hero {
+
+    min-height: 100vh;
+
+  }
+
+}
+
+/* =========================================
+   EXPERIENCE & EDUCATION — TRAIN TIMELINE
+   ========================================= */
+
+.journey-section,
+.journey-section * {
+  box-sizing: border-box;
+}
+
+.journey-section {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  padding: 100px 24px 80px;
+  overflow: hidden;
+  background: #030608;
+  color: #edf3f8;
+}
+
+.journey-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Section heading */
+
+.journey-header {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.journey-eyebrow {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #00f0b0;
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.journey-header h2 {
+  margin: 0 0 15px;
+  color: #f4f7fb;
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+}
+
+.journey-header h2 span {
+  color: #00edb0;
+}
+
+.journey-header p {
+  margin: 0;
+  color: #8592a3;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.journey-line {
+  width: 65px;
+  height: 3px;
+  margin: 25px auto 0;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #00edb0, #00dcff);
+  box-shadow: 0 0 16px rgba(0, 237, 176, 0.22);
+}
+
+/* Railway layout */
+
+.railway {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 0 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+  overflow: visible;
+}
+
+/* Central glowing railway */
+
+.rail-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  z-index: 0;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(0, 237, 176, 0.35) 5%,
+    rgba(0, 237, 176, 0.85) 50%,
+    rgba(0, 220, 255, 0.4) 95%,
+    transparent
+  );
+  box-shadow: 0 0 12px rgba(0, 237, 176, 0.12);
+}
+
+/* Alternating stations */
+
+.rail-station {
+  position: relative;
+  z-index: 1;
+  width: 50%;
+  min-width: 0;
+  padding-right: 58px;
+  align-self: flex-start;
+}
+
+.rail-station.station-right {
+  padding-right: 0;
+  padding-left: 58px;
+  align-self: flex-end;
+}
+
+/* Journey cards */
+
+.journey-card {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  padding: 26px 27px 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 19px;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(0, 237, 176, 0.055),
+      transparent 40%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(14, 21, 27, 0.98),
+      rgba(7, 11, 15, 0.98)
+    );
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.13);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.journey-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 237, 176, 0.36);
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.24),
+    0 0 24px rgba(0, 237, 176, 0.045);
+}
+
+.journey-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.journey-type {
+  display: inline-flex;
+  align-items: center;
+  font-family: monospace;
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 1.7px;
+}
+
+.journey-type.education {
+  color: #00edb0;
+}
+
+.journey-type.experience {
+  color: #00dfff;
+}
+
+.journey-year {
+  color: #7f8da0;
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.8px;
+  text-align: right;
+}
+
+.journey-card h3 {
+  margin: 0 0 10px;
+  color: #f0f4f9;
+  font-size: clamp(17px, 1.8vw, 21px);
+  font-weight: 750;
+  line-height: 1.4;
+  letter-spacing: -0.4px;
+  overflow-wrap: anywhere;
+}
+
+.journey-card h4 {
+  margin: 0 0 17px;
+  color: #aab6c5;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.journey-card p {
+  margin: 0 0 20px;
+  color: #8491a1;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+
+.journey-card-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.journey-meta {
+  color: #657387;
+  font-family: monospace;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.8;
+  letter-spacing: 0.8px;
+  overflow-wrap: anywhere;
+}
+
+.journey-certificate {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+  color: #00eaff;
+  font-family: monospace;
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.journey-certificate:hover {
+  color: #00f0b0;
+}
+
+/* Station number — above the track */
+
+.rail-station-node {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(0, 234, 255, 0.7);
+  border-radius: 50%;
+  background: #050b0f;
+  box-shadow:
+    0 0 0 8px rgba(0, 234, 255, 0.035),
+    0 0 20px rgba(0, 234, 255, 0.09);
+  transform: translateY(-50%);
+}
+
+.station-left .rail-station-node {
+  right: -22px;
+}
+
+.station-right .rail-station-node {
+  left: -22px;
+}
+
+.rail-station-node span {
+  color: #00eaff;
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* Short connecting lines */
+
+.rail-connector {
+  position: absolute;
+  top: 50%;
+  z-index: 0;
+  width: 58px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 237, 176, 0.1),
+    rgba(0, 237, 176, 0.65)
+  );
+}
+
+.station-left .rail-connector {
+  right: 0;
+}
+
+.station-right .rail-connector {
+  left: 0;
+}
+
+/* Futuristic metro train */
+
+.journey-train {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 3;
+  width: 48px;
+  height: 80px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(-50%);
+  animation: journeyTrainRun 24s linear infinite;
+  will-change: top, opacity;
+}
+
+.train-light {
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #d5fffb;
+  box-shadow:
+    0 0 7px #00ffe1,
+    0 0 17px rgba(0, 255, 225, 0.8);
+  transform: translateX(-50%);
+  animation: trainHeadlightPulse 2.4s ease-in-out infinite;
+}
+
+.train-body {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 34px;
+  height: 60px;
+  padding: 9px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 1px solid rgba(0, 238, 255, 0.75);
+  border-radius: 12px 12px 8px 8px;
+  background: linear-gradient(
+    180deg,
+    rgba(14, 38, 44, 0.98),
+    rgba(3, 10, 15, 0.99)
+  );
+  box-shadow:
+    inset 0 0 12px rgba(0, 234, 255, 0.08),
+    0 0 15px rgba(0, 234, 255, 0.12);
+  transform: translateX(-50%);
+}
+
+.train-front-window {
+  display: block;
+  flex-shrink: 0;
+  width: 17px;
+  height: 8px;
+  margin-bottom: 1px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #c9fffa, #00eaff);
+  box-shadow: 0 0 9px rgba(0, 234, 255, 0.55);
+}
+
+.train-window {
+  display: block;
+  flex-shrink: 0;
+  width: 18px;
+  height: 4px;
+  border-radius: 3px;
+  background: #00eaff;
+  box-shadow: 0 0 5px rgba(0, 234, 255, 0.4);
+}
+
+.train-wheel {
+  position: absolute;
+  top: 55px;
+  width: 5px;
+  height: 10px;
+  border: 1px solid #00cfc5;
+  border-radius: 3px;
+  background: #071a1d;
+}
+
+.train-wheel-one {
+  left: 4px;
+}
+
+.train-wheel-two {
+  right: 4px;
+}
+
+@keyframes journeyTrainRun {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  98%,
+  100% {
+    top: calc(100% - 80px);
+    opacity: 0;
+  }
+}
+
+@keyframes trainHeadlightPulse {
+  0%,
+  100% {
+    opacity: 0.75;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* End of journey */
+
+.journey-end {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 35px auto 0;
+  color: #687789;
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-align: center;
+}
+
+.journey-end-dot {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #00edb0;
+  box-shadow: 0 0 12px rgba(0, 237, 176, 0.6);
+  animation: journeyEndPulse 2s ease-in-out infinite;
+}
+
+@keyframes journeyEndPulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    box-shadow: 0 0 5px rgba(0, 237, 176, 0.35);
+  }
+
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 13px rgba(0, 237, 176, 0.75);
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 800px) {
+  .journey-section {
+    padding: 80px 22px 65px;
+  }
+
+  .journey-header {
+    margin-bottom: 45px;
+  }
+
+  .railway {
+    gap: 28px;
+  }
+
+  .rail-station {
+    padding-right: 48px;
+  }
+
+  .rail-station.station-right {
+    padding-left: 48px;
+  }
+
+  .journey-card {
+    padding: 22px 20px;
+  }
+
+  .journey-card-top {
+    margin-bottom: 17px;
+  }
+
+  .journey-card h3 {
+    font-size: 17px;
+  }
+
+  .rail-connector {
+    width: 48px;
+  }
+}
+
+/* Mobile: one clean vertical timeline */
+
+@media (max-width: 600px) {
+  .journey-section {
+    padding: 70px 17px 55px;
+  }
+
+  .journey-header {
+    margin-bottom: 36px;
+  }
+
+  .journey-header h2 {
+    font-size: 30px;
+    letter-spacing: -0.8px;
+  }
+
+  .journey-header p {
+    font-size: 12px;
+  }
+
+  .railway {
+    padding: 8px 0 25px 43px;
+    gap: 24px;
+  }
+
+  .rail-line {
+    left: 21px;
+  }
+
+  .rail-station,
+  .rail-station.station-right {
+    width: 100%;
+    padding: 0;
+    padding-left: 0;
+    align-self: stretch;
+  }
+
+  .journey-card {
+    width: 100%;
+    padding: 21px 17px;
+    border-radius: 15px;
+  }
+
+  .journey-card-top {
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .journey-year {
+    font-size: 9px;
+  }
+
+  .journey-card h3 {
+    font-size: 18px;
+  }
+
+  .journey-card h4 {
+    font-size: 12px;
+  }
+
+  .journey-card p {
+    font-size: 12px;
+  }
+
+  .journey-card-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .rail-station-node,
+  .station-left .rail-station-node,
+  .station-right .rail-station-node {
+    top: 28px;
+    left: -43px;
+    right: auto;
+    width: 42px;
+    height: 42px;
+    transform: none;
+  }
+
+  .rail-connector,
+  .station-left .rail-connector,
+  .station-right .rail-connector {
+    top: 48px;
+    left: -22px;
+    right: auto;
+    width: 22px;
+  }
+
+  .journey-train {
+    left: 21px;
+  }
+
+  .journey-end {
+    margin-top: 20px;
+    font-size: 9px;
+    letter-spacing: 0.7px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .journey-train,
+  .train-light,
+  .journey-end-dot {
+    animation: none;
+  }
+
+  .journey-train {
+    top: 35%;
+    opacity: 1;
+  }
+
+  .journey-card {
+    transition: none;
+  }
+}

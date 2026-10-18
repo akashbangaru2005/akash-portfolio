@@ -1,0 +1,76 @@
+:root {
+  /* =========================
+     COLORS
+  ========================= */
+
+  --bg-primary: #030508;
+  --bg-secondary: #070b12;
+  --bg-tertiary: #0b111a;
+
+  --text-primary: #f5f7ff;
+  --text-secondary: #a8b0c0;
+  --text-muted: #697386;
+
+  --accent: #00e5ff;
+  --accent-secondary: #7c3cff;
+  --accent-pink: #ff2bd6;
+  --accent-green: #00ff9d;
+
+  --border: rgba(255, 255, 255, 0.1);
+  --border-light: rgba(255, 255, 255, 0.16);
+
+  --glass-bg: rgba(255, 255, 255, 0.045);
+  --glass-bg-strong: rgba(255, 255, 255, 0.075);
+
+  /* =========================
+     SHADOWS
+  ========================= */
+
+  --shadow-sm: 0 5px 20px rgba(0, 0, 0, 0.25);
+
+  --shadow-md:
+    0 15px 50px rgba(0, 0, 0, 0.35);
+
+  --shadow-lg:
+    0 25px 80px rgba(0, 0, 0, 0.5);
+
+  --glow-cyan:
+    0 0 25px rgba(0, 229, 255, 0.25);
+
+  --glow-purple:
+    0 0 30px rgba(124, 60, 255, 0.3);
+
+  /* =========================
+     RADIUS
+  ========================= */
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-xl: 40px;
+
+  /* =========================
+     TRANSITIONS
+  ========================= */
+
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.6s ease;
+
+  /* =========================
+     LAYOUT
+  ========================= */
+
+  --container-width: 1200px;
+
+  --section-padding: 110px;
+
+  /* =========================
+     Z INDEX
+  ========================= */
+
+  --z-background: -10;
+  --z-content: 1;
+  --z-navbar: 100;
+  --z-modal: 1000;
+}

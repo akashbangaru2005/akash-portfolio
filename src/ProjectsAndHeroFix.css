@@ -1,0 +1,949 @@
+/* =========================================================
+   AKASH PORTFOLIO — PROFESSIONAL HERO + PROJECTS LAYOUT
+   Import this stylesheet AFTER App.css.
+   ========================================================= */
+
+/* =========================================================
+   HERO: LAYOUT AND BACKGROUND LAYERS
+   ========================================================= */
+
+.portfolio #home.hero {
+  position: relative !important;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: min(820px, calc(100svh - 84px));
+  padding: clamp(54px, 6vw, 82px) 0 76px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #030608;
+}
+
+/* Matrix and decorative backgrounds remain behind all content. */
+.portfolio #home.hero > .code-matrix-background,
+.portfolio #home.hero > .hero-grid-background,
+.portfolio #home.hero > .binary-rain {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100%;
+  height: 100%;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+
+.portfolio #home.hero > .code-matrix-background {
+  opacity: 0.58;
+}
+
+/* Darken the code behind the words for clean contrast. */
+.portfolio #home.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 6, 8, 0.86) 0%,
+      rgba(3, 6, 8, 0.76) 46%,
+      rgba(3, 6, 8, 0.52) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 6, 8, 0.12) 0%,
+      rgba(3, 6, 8, 0.28) 100%
+    );
+}
+
+.portfolio #home.hero > .hero-container {
+  position: relative !important;
+  z-index: 2 !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr) !important;
+  align-items: center;
+  gap: clamp(32px, 5.5vw, 84px);
+  width: min(100% - 56px, 1380px) !important;
+  max-width: 1380px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+.portfolio #home.hero .hero-content {
+  position: relative !important;
+  z-index: 3 !important;
+  width: 100%;
+  max-width: 760px;
+  min-width: 0;
+}
+
+.portfolio #home.hero .hero-visual {
+  position: relative !important;
+  z-index: 3 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  padding: 16px 0;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HERO: STATUS LABEL AND KICKER
+   ========================================================= */
+
+.portfolio #home.hero .hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  max-width: 100%;
+  margin: 0 0 22px;
+  padding: 10px 14px;
+  border: 1px solid rgba(0, 234, 255, 0.2);
+  border-radius: 999px;
+  background: rgba(0, 234, 255, 0.045);
+  color: #c6faff;
+  font-family: "Courier New", Consolas, monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  line-height: 1.4;
+}
+
+.portfolio #home.hero .live-dot {
+  flex: 0 0 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00ff9c;
+  box-shadow: 0 0 10px rgba(0, 255, 156, 0.75);
+}
+
+.portfolio #home.hero .hero-kicker {
+  margin: 0 0 16px;
+  color: #00eaff;
+  font-family: "Courier New", Consolas, monospace;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   HERO: MAIN HEADING — CONTROLLED SIZE AND LINE WRAPPING
+   ========================================================= */
+
+.portfolio #home.hero .hero-content > h1 {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 0 22px;
+  color: #f5f7fb;
+  font-size: clamp(48px, 4.45vw, 76px);
+  font-weight: 850;
+  line-height: 0.99;
+  letter-spacing: -0.065em;
+  overflow-wrap: normal;
+  word-break: normal;
+  text-wrap: balance;
+}
+
+.portfolio #home.hero .hero-name {
+  display: inline-block;
+  white-space: nowrap;
+  color: #f5f7fb;
+}
+
+.portfolio #home.hero .hero-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.25px rgba(228, 236, 245, 0.68);
+  text-stroke: 1.25px rgba(228, 236, 245, 0.68);
+}
+
+.portfolio #home.hero .gradient-text {
+  display: inline-block;
+  color: #00eaff;
+  background: linear-gradient(105deg, #54f7da 0%, #27c7f7 42%, #9b52ff 78%, #d43dff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Keep the paired words together when the viewport has enough room. */
+.portfolio #home.hero .hero-outline,
+.portfolio #home.hero .hero-content > h1 .gradient-text {
+  white-space: nowrap;
+}
+
+.portfolio #home.hero .hero-description {
+  max-width: 590px;
+  margin: 0 0 26px;
+  color: #a3adba;
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 0;
+}
+
+/* =========================================================
+   HERO: BUTTONS AND META
+   ========================================================= */
+
+.portfolio #home.hero .hero-buttons {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 11px;
+  margin: 0 0 32px;
+}
+
+.portfolio #home.hero .primary-button,
+.portfolio #home.hero .secondary-button,
+.portfolio #home.hero .resume-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 0 17px;
+  border-radius: 9px;
+  box-sizing: border-box;
+  font-family: "Courier New", Consolas, monospace;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  line-height: 1.3;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.22s ease, background 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.portfolio #home.hero .primary-button {
+  border: 1px solid #00eaff;
+  background: #00eaff;
+  color: #031013;
+  box-shadow: 0 7px 24px rgba(0, 234, 255, 0.12);
+}
+
+.portfolio #home.hero .secondary-button,
+.portfolio #home.hero .resume-button {
+  border: 1px solid rgba(220, 235, 245, 0.18);
+  background: rgba(255, 255, 255, 0.035);
+  color: #e0e7ee;
+}
+
+.portfolio #home.hero .primary-button:hover,
+.portfolio #home.hero .secondary-button:hover,
+.portfolio #home.hero .resume-button:hover {
+  transform: translateY(-2px);
+}
+
+.portfolio #home.hero .secondary-button:hover,
+.portfolio #home.hero .resume-button:hover {
+  border-color: rgba(0, 234, 255, 0.5);
+  background: rgba(0, 234, 255, 0.07);
+}
+
+.portfolio #home.hero .hero-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 720px;
+  padding-top: 19px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.portfolio #home.hero .hero-meta > div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.portfolio #home.hero .hero-meta span {
+  color: #738091;
+  font-family: "Courier New", Consolas, monospace;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.portfolio #home.hero .hero-meta strong {
+  color: #d7dee7;
+  font-size: 10px;
+  font-weight: 650;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.portfolio #home.hero .hero-scroll {
+  position: absolute;
+  right: max(28px, calc((100vw - 1380px) / 2));
+  bottom: 22px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #748394;
+  font-family: "Courier New", Consolas, monospace;
+  font-size: 8px;
+  letter-spacing: 1.7px;
+}
+
+.portfolio #home.hero .scroll-line {
+  display: inline-block;
+  width: 42px;
+  height: 1px;
+  background: linear-gradient(90deg, #00eaff, transparent);
+}
+
+/* =========================================================
+   HERO: PHOTO / DIGITAL PORTRAIT
+   ========================================================= */
+
+.portfolio #home.hero .portrait-wrapper {
+  position: relative;
+  width: min(100%, 410px);
+  margin: 0 auto;
+  isolation: isolate;
+}
+
+.portfolio #home.hero .binary-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 0.91 / 1;
+  overflow: hidden;
+  border: 1px solid rgba(0, 234, 255, 0.48);
+  border-radius: 24px;
+  background: #071014;
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.42),
+    0 0 0 1px rgba(0, 255, 180, 0.05),
+    0 0 38px rgba(0, 234, 255, 0.08);
+  isolation: isolate;
+}
+
+.portfolio #home.hero .binary-photo > img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 24%;
+  filter: grayscale(1) contrast(1.04) brightness(0.92);
+  z-index: 1;
+}
+
+.portfolio #home.hero .photo-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(2, 7, 10, 0.04) 38%, rgba(2, 7, 10, 0.58) 100%);
+}
+
+.portfolio #home.hero .binary-overlay {
+  position: absolute;
+  inset: 7% 6%;
+  z-index: 3;
+  overflow: hidden;
+  color: rgba(0, 255, 205, 0.28);
+  font-family: "Courier New", Consolas, monospace;
+  font-size: 7px;
+  line-height: 1.7;
+  letter-spacing: 2px;
+  overflow-wrap: anywhere;
+  opacity: 0.42;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.portfolio #home.hero .scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 2px;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(0, 234, 255, 0.95), transparent);
+  box-shadow: 0 0 14px rgba(0, 234, 255, 0.65);
+  animation: akashPortraitScan 4.4s ease-in-out infinite;
+}
+
+@keyframes akashPortraitScan {
+  0% { top: 0; opacity: 0; }
+  8% { opacity: 0.9; }
+  88% { opacity: 0.9; }
+  100% { top: calc(100% - 2px); opacity: 0; }
+}
+
+.portfolio #home.hero .corner {
+  position: absolute;
+  z-index: 6;
+  width: 25px;
+  height: 25px;
+  border-color: #00eaff;
+  border-style: solid;
+  border-width: 0;
+  pointer-events: none;
+}
+
+.portfolio #home.hero .corner-tl {
+  top: 14px;
+  left: 14px;
+  border-top-width: 2px;
+  border-left-width: 2px;
+}
+
+.portfolio #home.hero .corner-tr {
+  top: 14px;
+  right: 14px;
+  border-top-width: 2px;
+  border-right-width: 2px;
+}
+
+.portfolio #home.hero .corner-bl {
+  bottom: 14px;
+  left: 14px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+}
+
+.portfolio #home.hero .corner-br {
+  right: 14px;
+  bottom: 14px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+}
+
+.portfolio #home.hero .binary-label {
+  position: absolute;
+  z-index: 6;
+  max-width: calc(100% - 50px);
+  overflow: hidden;
+  color: #a7f9ff;
+  font-family: "Courier New", Consolas, monospace;
+  font-size: 8px;
+  letter-spacing: 1px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.portfolio #home.hero .binary-label.label-top {
+  top: 20px;
+  left: 25px;
+}
+
+.portfolio #home.hero .binary-label.label-bottom {
+  bottom: 20px;
+  left: 25px;
+}
+
+.portfolio #home.hero .portrait-status {
+  position: absolute;
+  right: 22px;
+  bottom: 19px;
+  z-index: 7;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #e0fbff;
+  font-family: "Courier New", Consolas, monospace;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  pointer-events: none;
+}
+
+.portfolio #home.hero .portrait-status .status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00ff9c;
+  box-shadow: 0 0 8px rgba(0, 255, 156, 0.75);
+}
+
+.portfolio #home.hero .binary-orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  width: 112%;
+  aspect-ratio: 1;
+  border: 1px solid rgba(0, 234, 255, 0.12);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.portfolio #home.hero .binary-orbit.orbit-two {
+  width: 126%;
+  border-color: rgba(0, 255, 156, 0.08);
+}
+
+.portfolio #home.hero .binary-side-text {
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  color: rgba(0, 234, 255, 0.35);
+  font-family: "Courier New", Consolas, monospace;
+  font-size: 8px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.portfolio #home.hero .binary-side-text.side-left {
+  left: -36px;
+}
+
+.portfolio #home.hero .binary-side-text.side-right {
+  right: -36px;
+}
+
+/* =========================================================
+   PROJECTS: EVEN CARD WIDTHS WITH A FLEX WRAP LAYOUT
+   ========================================================= */
+
+.portfolio .projects-section {
+  width: 100%;
+  padding: 88px 0 96px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.portfolio .projects-container {
+  width: calc(100% - 40px);
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.portfolio .projects-header {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.portfolio .projects-label {
+  display: inline-block;
+  margin: 0 0 12px;
+  color: #00eaff;
+  font-family: "Courier New", Consolas, monospace;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.portfolio .projects-header h2 {
+  margin: 0 0 12px;
+  color: #f5f7fa;
+  font-size: clamp(30px, 3.5vw, 42px);
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.portfolio .projects-header h2 span {
+  color: #00ff9c;
+  text-shadow: 0 0 12px rgba(0, 255, 156, 0.18);
+}
+
+.portfolio .projects-header p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #8490a0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Flex creates three equal cards on row one and centers the last two. */
+.portfolio .projects-section .projects-grid {
+  display: flex !important;
+  flex-flow: row wrap !important;
+  justify-content: center !important;
+  align-items: stretch;
+  gap: 18px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.portfolio .projects-section .project-card {
+  position: relative;
+  display: flex;
+  flex: 0 0 calc((100% - 36px) / 3) !important;
+  flex-direction: column;
+  width: calc((100% - 36px) / 3) !important;
+  max-width: calc((100% - 36px) / 3) !important;
+  min-width: 0;
+  min-height: 255px;
+  margin: 0;
+  padding: 22px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.085);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(0, 255, 170, 0.075), transparent 40%),
+    linear-gradient(145deg, rgba(15, 18, 24, 0.98), rgba(7, 10, 15, 0.98));
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.portfolio .projects-section .project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 255, 170, 0.38);
+  box-shadow: 0 14px 34px rgba(0, 255, 170, 0.075), inset 0 0 24px rgba(0, 255, 170, 0.018);
+}
+
+.portfolio .projects-section .project-number {
+  margin: 0 0 20px;
+  color: rgba(116, 132, 151, 0.52);
+  font-family: "Courier New", Consolas, monospace;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.portfolio .projects-section .project-category {
+  width: 100%;
+  margin: 0 0 9px;
+  overflow: hidden;
+  color: #00eaff;
+  font-family: "Courier New", Consolas, monospace;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.portfolio .projects-section .project-card h3 {
+  margin: 0 0 10px;
+  color: #f5f7fa;
+  font-size: 19px;
+  font-weight: 750;
+  line-height: 1.3;
+  overflow-wrap: break-word;
+}
+
+.portfolio .projects-section .project-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  margin: 0 0 16px;
+  overflow: hidden;
+  color: #8490a0;
+  font-size: 11.5px;
+  line-height: 1.65;
+  overflow-wrap: break-word;
+}
+
+.portfolio .projects-section .project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  margin: auto 0 12px;
+  padding: 0;
+}
+
+.portfolio .projects-section .project-tech span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 20px;
+  padding: 5px 7px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.045);
+  color: #a0aaba;
+  font-family: "Courier New", Consolas, monospace;
+  font-size: 8px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.portfolio .projects-section .project-card:hover .project-tech span {
+  border-color: rgba(0, 255, 170, 0.14);
+  background: rgba(0, 255, 170, 0.035);
+}
+
+.portfolio .projects-section .project-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio .projects-section .project-link {
+  display: inline-flex;
+  align-items: center;
+  color: #00eaff;
+  font-family: "Courier New", Consolas, monospace;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.portfolio .projects-section .project-link:hover {
+  color: #fff;
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 980px) {
+  .portfolio #home.hero {
+    min-height: auto;
+    padding: 72px 0 82px;
+  }
+
+  .portfolio #home.hero > .hero-container {
+    grid-template-columns: minmax(0, 1.05fr) minmax(260px, 0.95fr) !important;
+    gap: 32px;
+    width: calc(100% - 40px) !important;
+  }
+
+  .portfolio #home.hero .hero-content > h1 {
+    font-size: clamp(42px, 5.2vw, 60px);
+    letter-spacing: -0.06em;
+  }
+
+  .portfolio #home.hero .portrait-wrapper {
+    max-width: 340px;
+  }
+
+  .portfolio .projects-section {
+    padding: 76px 0 84px;
+  }
+
+  .portfolio .projects-container {
+    width: calc(100% - 32px);
+    max-width: 760px;
+  }
+
+  .portfolio .projects-section .projects-grid {
+    gap: 15px;
+  }
+
+  .portfolio .projects-section .project-card {
+    flex-basis: calc((100% - 15px) / 2) !important;
+    width: calc((100% - 15px) / 2) !important;
+    max-width: calc((100% - 15px) / 2) !important;
+    min-height: 245px;
+    padding: 20px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .portfolio #home.hero {
+    min-height: auto;
+    padding: 52px 0 78px;
+  }
+
+  .portfolio #home.hero > .hero-container {
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 36px;
+    width: calc(100% - 36px) !important;
+    max-width: 520px !important;
+  }
+
+  .portfolio #home.hero .hero-content {
+    max-width: 100%;
+  }
+
+  .portfolio #home.hero .hero-label {
+    margin-bottom: 18px;
+    padding: 8px 11px;
+    font-size: 9px;
+    letter-spacing: 0.8px;
+  }
+
+  .portfolio #home.hero .hero-kicker {
+    font-size: 9px;
+    letter-spacing: 1.3px;
+  }
+
+  .portfolio #home.hero .hero-content > h1 {
+    font-size: clamp(40px, 10vw, 58px);
+    line-height: 1;
+    letter-spacing: -0.06em;
+  }
+
+  .portfolio #home.hero .hero-description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .portfolio #home.hero .hero-buttons {
+    gap: 9px;
+    margin-bottom: 25px;
+  }
+
+  .portfolio #home.hero .primary-button,
+  .portfolio #home.hero .secondary-button,
+  .portfolio #home.hero .resume-button {
+    min-height: 43px;
+    padding: 0 12px;
+    font-size: 9px;
+  }
+
+  .portfolio #home.hero .hero-meta {
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+  }
+
+  .portfolio #home.hero .hero-meta > div:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .portfolio #home.hero .hero-visual {
+    padding: 8px 0 12px;
+  }
+
+  .portfolio #home.hero .portrait-wrapper {
+    width: min(100%, 330px);
+  }
+
+  .portfolio #home.hero .binary-photo {
+    border-radius: 20px;
+  }
+
+  .portfolio #home.hero .binary-side-text {
+    display: none;
+  }
+
+  .portfolio #home.hero .hero-scroll {
+    right: 18px;
+    bottom: 18px;
+    font-size: 7px;
+    gap: 8px;
+  }
+
+  .portfolio .projects-section {
+    padding: 64px 0 74px;
+  }
+
+  .portfolio .projects-container {
+    width: calc(100% - 28px);
+    max-width: 430px;
+  }
+
+  .portfolio .projects-header {
+    margin-bottom: 28px;
+  }
+
+  .portfolio .projects-header h2 {
+    font-size: 30px;
+  }
+
+  .portfolio .projects-header p {
+    font-size: 12px;
+  }
+
+  .portfolio .projects-section .projects-grid {
+    gap: 14px;
+  }
+
+  .portfolio .projects-section .project-card {
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 235px;
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .portfolio .projects-section .project-number {
+    margin-bottom: 17px;
+    font-size: 29px;
+  }
+
+  .portfolio .projects-section .project-card h3 {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 380px) {
+  .portfolio #home.hero > .hero-container {
+    width: calc(100% - 28px) !important;
+  }
+
+  .portfolio #home.hero .hero-content > h1 {
+    font-size: 39px;
+  }
+
+  .portfolio #home.hero .hero-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio #home.hero .hero-meta > div:last-child {
+    grid-column: auto;
+  }
+
+  .portfolio .projects-container {
+    width: calc(100% - 22px);
+  }
+
+  .portfolio .projects-section .project-card {
+    min-height: 225px;
+    padding: 17px;
+  }
+
+  .portfolio .projects-section .project-card h3 {
+    font-size: 18px;
+  }
+
+  .portfolio .projects-section .project-tech span {
+    padding: 4px 6px;
+    font-size: 7px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY: REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio #home.hero .scan-line,
+  .portfolio .projects-section .project-card,
+  .portfolio .projects-section .project-link {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .portfolio .projects-section .project-card:hover,
+  .portfolio #home.hero .primary-button:hover,
+  .portfolio #home.hero .secondary-button:hover,
+  .portfolio #home.hero .resume-button:hover {
+    transform: none;
+  }
+}
