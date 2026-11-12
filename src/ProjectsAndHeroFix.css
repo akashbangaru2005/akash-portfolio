@@ -947,3 +947,65 @@
     transform: none;
   }
 }
+
+/* Interactive circuit board shares the existing hero visual column. */
+.portfolio #home.hero .hero-visual {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+}
+
+.portfolio #home.hero .circuit-panel {
+  min-width: 0;
+  width: 100%;
+  max-width: 410px;
+  margin: 0 auto;
+  padding: 16px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 234, 255, 0.25);
+  border-radius: 20px;
+  background: radial-gradient(ellipse at center, rgba(0, 255, 156, 0.08), transparent 70%), #061015;
+  color: #b7d4df;
+}
+
+.circuit-heading { display: flex; flex-direction: column; gap: 8px; font-family: Consolas, monospace; }
+.circuit-heading span { color: #80a8b7; font-size: 9px; letter-spacing: 1.4px; }
+.circuit-heading strong { color: #54f7da; font-size: 13px; letter-spacing: 2px; }
+.circuit-viewport { height: 240px; width: 100%; }
+.circuit-viewport canvas { display: block; }
+.portfolio #home.hero .circuit-hint { margin: 0 0 12px; color: #9eb5c0; font-size: 11px; line-height: 1.6; }
+.circuit-controls { display: flex; flex-wrap: wrap; gap: 7px; }
+.circuit-controls button {
+  min-width: 40px;
+  min-height: 40px;
+  padding: 6px 10px;
+  border: 1px solid #33545f;
+  border-radius: 7px;
+  background: #0b2028;
+  color: #d1f7f4;
+  font: 11px Consolas, monospace;
+  cursor: pointer;
+}
+.circuit-controls button:hover { border-color: #54f7da; }
+.circuit-controls button:focus-visible { outline: 2px solid #00eaff; outline-offset: 3px; }
+.circuit-controls button:disabled { opacity: 0.65; cursor: default; }
+.circuit-fallback {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(0deg, transparent 0 28px, #227c67 29px 30px),
+    repeating-linear-gradient(90deg, #063d35 0 28px, #227c67 29px 30px);
+  border-radius: 12px;
+}
+.circuit-fallback-chip { padding: 24px 15px; border: 5px dashed #d9bc71; background: #101b29; color: #54f7da; text-align: center; font: 12px/1.8 Consolas, monospace; }
+
+@media (min-width: 1180px) {
+  .portfolio #home.hero > .hero-container {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.2fr) !important;
+    gap: 40px;
+  }
+  .portfolio #home.hero .hero-visual { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 18px; }
+  .portfolio #home.hero .circuit-panel { padding: 12px; }
+  .circuit-viewport { height: 230px; }
+}
